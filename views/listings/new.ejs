@@ -1,94 +1,104 @@
 <%layout("/layout/boilerplate")%>
 
-  <form action="/listings" method="POST" class="needs-validation" novalidate>
-    <div class="row">
-      <div class="col-8 offset-2">
-        <br>
-        <h3 >Create New Listing</h3>
+<form
+  action="/listings"
+  method="POST"
+  class="needs-validation"
+  novalidate
+  enctype="multipart/form-data"
+>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <br />
+      <h3>Create New Listing</h3>
 
-        <div class="mb-4">
-          <label for="title" class="form-lable">Title</label>
-          <input
-            type="text"
-            name="listing[title]"
-            placeholder="Enter Title"
-            class="form-control"
-            required
-          />
-          <div class="invalid-feedback">Please enter a Good Description for post</div>
-          <div class="valid-feedback">Title Looks Good!!</div>
+      <div class="mb-4">
+        <label for="title" class="form-lable">Title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          placeholder="Enter Title"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">
+          Please enter a Good Description for post
         </div>
-
-        <div class="mb-3">
-          <label for="description" class="form-lable">Description</label>
-          <textarea
-            type="text"
-            name="listing[description]"
-            placeholder="Enter Description"
-            class="form-control"
-            required
-          ></textarea>
-          <div class="invalid-feedback">Please enter a Good Description for post</div>
-          <div class="valid-feedback"> Description's Looks Good!!</div>
-        </div>
-
-        <div class="mb-3">
-          <label for="image" class="form-lable">Image Link</label>
-          <input
-            type="text"
-            name="listing[image]"
-            placeholder="Enter image URL/Link"
-            class="form-control"
-          />
-        </div>
-        
-        <div class="row">
-            <div class="mb-3 col-md-4">
-                <label for="price" class="form-lable">Price</label>
-                <input
-                  type="number"
-                  name="listing[price]"
-                  placeholder="Enter Price"
-                  class="form-control"
-                  required
-                />
-                <div class="invalid-feedback">Please enter a valid Price</div>
-                <div class="valid-feedback">Valid Price!!</div>
-              </div>
-
-            <div class="mb-3 col-md-8">
-                <label for="country" class="form-lable">Country</label>
-                <input
-                  type="text"
-                  name="listing[country]"
-                  placeholder="Enter Country"
-                  class="form-control"
-                  required
-                />
-                <div class="invalid-feedback">Please enter a valid Country name</div>
-                <div class="valid-feedback">Correct Country!!</div>
-              </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="location" class="form-lable">Location</label>
-          <input
-            type="text"
-            name="listing[location]"
-            placeholder="Enter Location"
-            class="form-control"
-            required
-          />
-          <div class="invalid-feedback">Please enter a valid Location</div>
-          <div class="valid-feedback">Good Location!!</div>
-        </div>
-
-        <br>
-        <button class="btn btn-dark add-btn">Add</button>
-        <br><br><br>
+        <div class="valid-feedback">Title Looks Good!!</div>
       </div>
-     
-    </div>
-   
-  </form>
 
+      <div class="mb-3">
+        <label for="description" class="form-lable">Description</label>
+        <textarea
+          type="text"
+          name="listing[description]"
+          placeholder="Enter Description"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="invalid-feedback">
+          Please enter a Good Description for post
+        </div>
+        <div class="valid-feedback">Description's Looks Good!!</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-lable">Upload Image</label>
+        <input
+          type="file"
+          name="listing[image]"
+          class="form-control"
+        />
+        <div class="invalid-feedback">
+          Please enter a Good Image for post
+        </div>
+        <div class="valid-feedback">Image Looks Good!!</div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-lable">Price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            placeholder="Enter Price"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Please enter a valid Price</div>
+          <div class="valid-feedback">Valid Price!!</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-lable">Country</label>
+          <input
+            type="text"
+            name="listing[country]"
+            placeholder="Enter Country"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Please enter a valid Country name</div>
+          <div class="valid-feedback">Correct Country!!</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-lable">Location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          placeholder="Enter Location"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Please enter a valid Location</div>
+        <div class="valid-feedback">Good Location!!</div>
+      </div>
+
+      <br />
+      <button class="btn btn-dark add-btn">Add</button>
+      <br /><br /><br />
+    </div>
+  </div>
+</form>
