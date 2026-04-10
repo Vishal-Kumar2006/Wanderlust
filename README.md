@@ -72,13 +72,6 @@ View Source Code
 
 <hr/>
 
-<h2>📸 Screenshots</h2>
-<p>
-(Add screenshots or GIFs of your project here — homepage, listing page, review system, etc.)
-</p>
-
-<hr/>
-
 <h2>🚀 Getting Started (Local Setup)</h2>
 
 <h3>1. Clone the Repository</h3>
