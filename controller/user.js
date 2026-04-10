@@ -9,17 +9,10 @@ module.exports.GetSignUpForm = (req, res) => {
 module.exports.PostSignUpForm = async (req, res, next) => {
   try {
     let { username, email, password } = req.body;
-
     const newUser = new User({ email, username });
-    const registeredUser = await User.register(newUser, password);
-    console.log(registeredUser);
-    // req.login(registeredUser, (err)=> {
-    //   if(err) {
-    //     return next(err)
-    //   }
-    //   req.flash("sucess", "Welcome to WanderLust!");
-    // })
-    req.flash("sucess", "Welcome to WanderLust");
+    await User.register(newUser, password);
+
+    req.flash("success", "Welcome to WanderLust");
     res.redirect("/listings");
   } catch (err) {
     req.flash("error", err.message);
@@ -34,7 +27,7 @@ module.exports.GetLogInForm = (req, res) => {
 
 // Loggin Post Request
 module.exports.PostLoginForm = async (req, res) => {
-  req.flash("sucess", "welcome to wanderLust you are Logged in!!!");
+  req.flash("success", "welcome to wanderLust you are Logged in!!!");
   let redirectUrl = res.locals.redirectUrl || "/listings";
   res.redirect(redirectUrl);
 };
@@ -46,7 +39,7 @@ module.exports.LogOutController = (req, res, next) => {
       return next(error);
     }
 
-    req.flash("sucess", "You are Logged Out!");
+    req.flash("success", "You are Logged Out!");
     res.redirect("/listings");
   });
 };

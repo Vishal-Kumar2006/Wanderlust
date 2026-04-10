@@ -43,7 +43,25 @@
         <label for="image" class="form-lable">Upload New Image</label>
         <input type="file" name="listing[image]" class="form-control" />
         <div class="invalid-feedback">Please enter a valid Image Link</div>
-        <div class="valid-feedback">Photos links looks good</div>
+        <div class="valid-feedback">Photo looks good</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="catagory" class="form-lable"
+          >Select your bnb Category</label
+        >
+        <select name="listing[category]" class="form-select" required>
+          <option value="" selected disabled>Select Category</option>
+          <option value="Trending">Trending</option>
+          <option value="Room">Room</option>
+          <option value="Iconic Cities">Iconic Cities</option>
+          <option value="Mountains">Mountains</option>
+          <option value="Camping">Camping</option>
+          <option value="Farms">Farms</option>
+          <option value="Arctic">Arctic</option>
+          <option value="Amazing Pools">Amazing Pools</option>
+          <option value="Skating">Skating</option>
+        </select>
       </div>
 
       <div class="row">
